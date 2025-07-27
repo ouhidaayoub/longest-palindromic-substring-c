@@ -1,0 +1,14 @@
+# C build artifacts
+*.o
+*.obj
+*.exe
+a.out
+
+# build output
+bin/
+
+# editors/OS files
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
