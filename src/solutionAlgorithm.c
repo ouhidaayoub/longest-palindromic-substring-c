@@ -31,4 +31,22 @@ char* longestPalindrome(char* s) {
 
     int whileIterations = 0;
 
+    for (int i = 0; i < (stringLength - 1); i++) {
+
+        charactersAreTheSame = 0;
+        isFirstEdgeMatch = 0;
+        isTheCheckContinous = 0;
+        whileIterations = 0;
+
+        int leftIndex = i;
+        int rightIndex = (stringLength - 1 - whileIterations);
+
+        isFirstEdgeMatch = 0;
+        charactersAreTheSame = 0;
+
+        while (charactersAreTheSame == 0) {
+
+        }
+    }
+
 }
