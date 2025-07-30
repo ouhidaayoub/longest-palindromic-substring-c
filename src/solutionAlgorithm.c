@@ -80,10 +80,25 @@ char* longestPalindrome(char* s) {
                     isFirstEdgeMatch = 0;
                 }
 
+            }else{
+                if (isTheCheckContinous == 1) {
+                    leftEdgeIndex -= 2;
+                    possiblePalindromeIndices[leftEdgeIndex] = 0;
+                    rightEdgeIndex -= 2;
+                    possiblePalindromeIndices[rightEdgeIndex] = 0;
+                }
+
+                leftIndex = i;
+                whileIterations++;
+
+                rightIndex = (stringLength - 1 - whileIterations);
+
+                isFirstEdgeMatch = 0;
+                isTheCheckContinous = 0;
             }
 
         }
 
     }
-    
+
 }
