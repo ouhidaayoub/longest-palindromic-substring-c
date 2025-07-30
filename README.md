@@ -31,3 +31,12 @@ Output: "a"
 3. Complexity-based hint:  
    - A brute-force check of every start and end index has O(n²) pairs and O(n) per check.  
    - Can we reduce the palindromic check to O(1) by reusing previous computations?
+
+<h2>LeetCode Final Analysis (Screenshots)</h2>
+
+<table>
+  <tr>
+    <td><img src="assets/performance/runtime.png" alt="Runtime" width="420"></td>
+    <td><img src="assets/performance/memory.png" alt="Memory" width="420"></td>
+  </tr>
+</table>
