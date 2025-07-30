@@ -40,3 +40,14 @@ Output: "a"
     <td><img src="assets/performance/memory.png" alt="Memory" width="420"></td>
   </tr>
 </table>
+
+## 💭 My Reaction
+
+Honestly, I’m happy with how this solution turned out.  
+The time complexity being **O(n²)** makes sense for this type of approach,  
+and the space complexity staying at **O(n)** feels efficient enough.  
+
+Right now, I’m also learning **Manacher’s algorithm**, and I plan to use it in the future.  
+I didn’t use it this time because I didn’t know it yet,  
+and I don’t like copying code for things I don’t understand.  
+When I learn it properly, I’ll implement it myself and compare the results.
