@@ -101,4 +101,17 @@ char* longestPalindrome(char* s) {
 
     }
 
+    int maxSubstringLength = 0;
+    int maxSubstringIndices[2] = {0, 0};
+
+    for (int edgeIndices = 0; edgeIndices <= (rightEdgeIndex - 2); edgeIndices += 2) {
+        if ((possiblePalindromeIndices[edgeIndices + 1]) - (possiblePalindromeIndices[edgeIndices]) > maxSubstringLength) {
+            maxSubstringLength = ((possiblePalindromeIndices[edgeIndices + 1]) - (possiblePalindromeIndices[edgeIndices]));
+            maxSubstringIndices[0] = 0;
+            maxSubstringIndices[1] = 0;
+            maxSubstringIndices[0] += possiblePalindromeIndices[edgeIndices];
+            maxSubstringIndices[1] += possiblePalindromeIndices[edgeIndices + 1];
+        }
+    }
+
 }
