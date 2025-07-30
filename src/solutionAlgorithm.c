@@ -46,7 +46,44 @@ char* longestPalindrome(char* s) {
 
         while (charactersAreTheSame == 0) {
 
-        }
-    }
+            if (s[leftIndex] == s[rightIndex]) {
+                
+                charactersAreTheSame = 1;
 
+                if ((charactersAreTheSame == 1) && (isFirstEdgeMatch == 1) && (isTheCheckContinous == 1)) {
+                    isFirstEdgeMatch = 0;
+                } else if ((charactersAreTheSame == 1) && (isFirstEdgeMatch == 0) && (isTheCheckContinous == 0)){
+                    isFirstEdgeMatch = 1;
+                }
+
+                if ((charactersAreTheSame == 1) && (isFirstEdgeMatch == 1)) {
+
+                    possiblePalindromeIndices[leftEdgeIndex] += leftIndex;
+                    leftEdgeIndex += 2;
+                    possiblePalindromeIndices[leftEdgeIndex] = 0;
+
+                    possiblePalindromeIndices[rightEdgeIndex] += rightIndex;
+                    rightEdgeIndex += 2;
+                    possiblePalindromeIndices[rightEdgeIndex] = 0;
+
+                    isTheCheckContinous = 1;
+                }
+
+                if ((leftIndex == rightIndex) || ((leftIndex + 1) == rightIndex)) {
+                    if(((leftIndex + 1) == rightIndex));
+                    else if((leftIndex == rightIndex));
+                    break;
+                } else {
+                    leftIndex++;
+                    rightIndex--;
+                    charactersAreTheSame = 0;
+                    isFirstEdgeMatch = 0;
+                }
+
+            }
+
+        }
+
+    }
+    
 }
