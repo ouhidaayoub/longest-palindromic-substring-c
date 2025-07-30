@@ -3,14 +3,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-char* longestPalindrome(char* s);
-
-int main() {
-    char *result = longestPalindrome("babad");
-    printf("Input: %s | Longest palindrome: %s\n", "babad", result);
-    return 0;
-}
-
 char* longestPalindrome(char* s) {
 
     bool charactersAreTheSame = 0;
