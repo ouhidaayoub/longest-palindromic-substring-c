@@ -6,12 +6,29 @@
 char* longestPalindrome(char* s);
 
 int main() {
-    char input[] = "babad";
     char *result = longestPalindrome("babad");
-    printf("Input: %s | Longest palindrome: %s\n", input, result);
+    printf("Input: %s | Longest palindrome: %s\n", "babad", result);
     return 0;
 }
 
 char* longestPalindrome(char* s) {
-    return s;
+
+    bool charactersAreTheSame = 0;
+    bool isFirstEdgeMatch = 0;
+    bool isTheCheckContinous = 0;
+
+    int stringLength = strlen(s);
+
+    int *possiblePalindromeIndices;
+    int capacity = 2 * stringLength + 2;
+    possiblePalindromeIndices = malloc(capacity * sizeof(int));
+
+    int leftEdgeIndex = 0;
+    int rightEdgeIndex = 1;
+
+    possiblePalindromeIndices[leftEdgeIndex] = 0;
+    possiblePalindromeIndices[rightEdgeIndex] = 0;
+
+    int whileIterations = 0;
+
 }
