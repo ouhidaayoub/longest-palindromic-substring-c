@@ -114,4 +114,21 @@ char* longestPalindrome(char* s) {
         }
     }
 
+    size_t resultStringSize = 1000;
+    char *resultString = malloc(resultStringSize + 1);
+    int resultIndex = 0;
+
+    for (int copyingIndex = maxSubstringIndices[0]; copyingIndex <= maxSubstringIndices[1]; copyingIndex++) {
+        resultString[resultIndex] = s[copyingIndex];
+        resultIndex++;
+    }
+
+    resultString[resultIndex] = '\0';
+
+    size_t resultLength = strlen(resultString);
+    resultString = realloc(resultString, (resultLength + 1));
+
+    free(possiblePalindromeIndices);
+
+    return resultString;
 }
